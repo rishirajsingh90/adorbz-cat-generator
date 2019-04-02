@@ -1,13 +1,14 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color: rgb(13, 13, 13);
-  color: white;
+  background-color: rgb(254,250,246);
+  color: rgb(130,130,130);
   height: 100vh;
 }
 
 .Title {
   padding: 15% 0px 15% 0px;
+  color: rgb(130,130,130)
 }
 
 .cat-top-right {
