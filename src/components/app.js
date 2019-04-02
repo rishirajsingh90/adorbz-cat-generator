@@ -18,19 +18,24 @@ export const App = () => {
           <h1>Adorbz Cat Generator</h1>
         </Row>
         <Row>
-          <p>Click the button to generate a tots adorbz cat name!</p>
+          <p>Click the button to name your tots adorbz cat name!</p>
         </Row>
         <Row>
           <Button variant="primary" onClick={() => setCatName(generateCatName)}>
-            Click me!
+            Name me!
           </Button>
         </Row>
-        <CatName name={catName} />
-        <Suspense fallback={<span>LOADING...</span>}>
-          <CatPic />
-        </Suspense>
-        <div className="cat-bottom-left" />
-        <div className="branding" />
+        <Row>
+          <CatName name={catName} />
+        </Row>
+        <Row className="image-content">
+          <Suspense fallback={<span>LOADING...</span>}>
+            <CatPic />
+          </Suspense>
+        </Row>
+        <Row>
+          <div className="cat-bottom-left" />
+        </Row>
       </Container>
     </div>
   );

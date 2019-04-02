@@ -1,14 +1,14 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color: rgb(254,250,246);
-  color: rgb(130,130,130);
+  background-color: rgb(254, 250, 246);
+  color: rgb(130, 130, 130);
   height: 100vh;
 }
 
 .Title {
-  padding: 15% 0px 15% 0px;
-  color: rgb(130,130,130)
+  padding: 15% 0px 5% 0px;
+  color: rgb(130, 130, 130);
 }
 
 .cat-top-right {
@@ -21,16 +21,12 @@
 
 .cat-bottom-left {
   content: url(https://uploads.codesandbox.io/uploads/user/7f08ca0e-d0ac-41fc-ae47-7737812d2f9a/XGR7-cat2_pink.png);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0px;
   width: 15%;
 }
 
-.branding {
-  content: url(https://uploads.codesandbox.io/uploads/user/7f08ca0e-d0ac-41fc-ae47-7737812d2f9a/33Mo-slalom-thumbnail.jpg);
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  width: 25%;
+.image-content {
+  margin-bottom: 15%;
 }
