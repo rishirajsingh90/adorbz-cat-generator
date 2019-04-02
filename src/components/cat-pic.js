@@ -1,10 +1,34 @@
 import React from "react";
-import useFetch from "fetch-suspense";
 
 const catApi = "https://api.thecatapi.com/v1/images/search";
 
-export const CatPic = () => {
-  const catPicResponse = useFetch(catApi, { method: "GET" });
+export class CatPic extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      catUrl: ""
+    };
+  }
 
-  return catPicResponse ? <img src={catPicResponse[0].url} /> : <div />;
-};
+  componentDidMount() {
+    this.fetchCatPicAndSetState();
+  }
+
+  componentDidUpdate(prevProps, prevState) {}
+
+  componentWillUnmount() {}
+
+  render() {
+    return this.state.catUrl ? <img src={this.state.catUrl} /> : <div />;
+  }
+
+  fetchCatPicAndSetState() {
+    fetch(catApi, { method: "GET" })
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          catUrl: data[0].url
+        })
+      );
+  }
+}
